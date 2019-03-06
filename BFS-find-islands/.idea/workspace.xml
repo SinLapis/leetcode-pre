@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9321f09-965b-4cef-aaaf-b9601c6350fc" name="Default Changelist" comment="" />
+    <list default="true" id="b9321f09-965b-4cef-aaaf-b9601c6350fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../BFS-perfect-squares/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../min-stack/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stack-daily-temperatures/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stack-evaluate-RPN/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stack-valid-parentheses/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/BFS-wheels-lock-go.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/Main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Password.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Password.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/SolutionTimeout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/src/Main.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2494">
-              <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+            <state relative-caret-position="2233">
+              <caret line="77" column="8" lean-forward="true" selection-start-line="77" selection-start-column="8" selection-end-line="85" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#211#212#0" expanded="true" />
@@ -28,6 +50,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -42,13 +67,13 @@
     <option name="width" value="1400" />
     <option name="height" value="880" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -71,13 +96,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551765650199" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BFS-perfect-squares" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -120,11 +146,12 @@
       <updated>1551752183040</updated>
       <workItem from="1551752187495" duration="13000" />
       <workItem from="1551752252404" duration="7983000" />
+      <workItem from="1551858461883" duration="4409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7996000" />
+    <option name="totallyTimeSpent" value="12405000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -138,14 +165,13 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3290461" />
@@ -158,6 +184,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3290461" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -182,8 +209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2494">
-          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        <state relative-caret-position="2233">
+          <caret line="77" column="8" lean-forward="true" selection-start-line="77" selection-start-column="8" selection-end-line="85" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#211#212#0" expanded="true" />

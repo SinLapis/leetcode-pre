@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e17bbf14-cb19-441a-bdc7-4fa642509843" name="Default Changelist" comment="">
+    <list default="true" id="421b87a3-508f-4c16-86bc-e7b1b9fbc1b9" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../BFS-perfect-squares/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../min-stack/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../stack-daily-temperatures/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../stack-valid-parentheses/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stack-evaluate-reverse-polish-notation/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/BFS-wheels-lock-go.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
@@ -13,13 +14,13 @@
       <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock-go/Main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BFS-wheels-lock/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BFS-wheels-lock/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BFS-wheels-lock/Password.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BFS-wheels-lock/Password.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BFS-wheels-lock/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BFS-wheels-lock/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BFS-wheels-lock/SolutionTimeout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Password.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Password.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/out/production/BFS-wheels-lock/SolutionTimeout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BFS-wheels-lock/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS-wheels-lock/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,24 +34,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="667">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>out</find>
-      <find>sys</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -76,30 +66,26 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="BFS-wheels-lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BFS-wheels-lock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BFS-wheels-lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BFS-wheels-lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="stack-valid-parentheses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stack-valid-parentheses" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551842889164" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551842793389" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -116,7 +102,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="BFS-wheels-lock" />
+      <module name="stack-valid-parentheses" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -135,18 +121,18 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e17bbf14-cb19-441a-bdc7-4fa642509843" name="Default Changelist" comment="" />
-      <created>1551766536711</created>
+      <changelist id="421b87a3-508f-4c16-86bc-e7b1b9fbc1b9" name="Default Changelist" comment="" />
+      <created>1551841346480</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551766536711</updated>
-      <workItem from="1551766538985" duration="9827000" />
-      <workItem from="1551834605762" duration="5000000" />
+      <updated>1551841346480</updated>
+      <workItem from="1551841350028" duration="1505000" />
+      <workItem from="1551843013109" duration="1201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14827000" />
+    <option name="totallyTimeSpent" value="2706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -161,7 +147,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32832617" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32939914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -170,8 +156,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32939914" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3290461" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -187,22 +173,21 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/List.java">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Stack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
+        <state relative-caret-position="302">
+          <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+          <folding>
+            <element signature="e#2807#2808#0" expanded="true" />
+            <element signature="e#2841#2842#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="667">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
       </provider>
     </entry>

@@ -9,9 +9,11 @@ class Password {
         System.arraycopy(password, 0, this.password, 0, 4);
         this.step = step;
     }
+
     int getStep() {
         return step;
     }
+
     @Override
     public boolean equals(Object obj) {
         try {
@@ -42,7 +44,7 @@ class Password {
     }
 }
 
-class SolutionTimeout {
+class Solution {
     private Password string2Password(String stringPassword) {
         String[] tempArray = stringPassword.split("");
         return new Password(new int[]{
@@ -80,7 +82,7 @@ class SolutionTimeout {
             List<Password> midPassword = next.getOneStepPassword();
             usedPassword.add(next);
             for (Password mid : midPassword) {
-                if (!deadendsP.contains(mid) && !usedPassword.contains(mid)) {
+                if (!deadendsP.contains(mid) && !usedPassword.contains(mid) && !oneStepPassword.contains(mid)) {
                     oneStepPassword.add(mid);
                 }
             }
@@ -91,85 +93,14 @@ class SolutionTimeout {
     }
 }
 
-class Solution {
-    private List<String> getOneStep(String next) {
-        String[] tempString = next.split("");
-        int[] tempInt = new int[4];
-        int[] backup = new int[4];
-        List<String> result = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
-            tempInt[i] = Integer.parseInt(tempString[i]);
-        }
-        System.arraycopy(tempInt, 0, backup, 0, 4);
-        for (int i = 0; i < 4; i++) {
-            System.arraycopy(backup, 0, tempInt, 0, 4);
-            tempInt[i] = (tempInt[i] + 1) % 10;
-            result.add("" + tempInt[0] + tempInt[1] + tempInt[2] + tempInt[3]);
-            // set -1
-            tempInt[i] = (tempInt[i] + 10 - 2) % 10;
-            result.add("" + tempInt[0] + tempInt[1] + tempInt[2] + tempInt[3]);
-        }
-        return result;
-    }
-    private boolean findString(String[] list, String target) {
-        for (String s: list) {
-            if (target.equals(s)) {
-                return true;
-            }
-        }
-        return false;
-    }
-    public int openLock(String[] deadends, String target) {
-        String[] oneStepPassword = new String[10001];
-        int oneHead = 0;
-        int oneTail = 0;
-        String[] usedPassword = new String[10000];
-        int usedPointer = 0;
-        String next = "0000";
-        if (findString(deadends, next)) {
-            return -1;
-        }
-        oneStepPassword[oneTail] = next;
-        oneTail++;
-        int step = 0;
-        int total = 1;
-        int nextTotal = 0;
-        while (true) {
-            next = oneStepPassword[oneHead];
-            oneHead++;
-            total--;
-            // 1. check if next is target
-            if (next.equals(target)) {
-                return step;
-            }
-            // 2. generate one step password
-            List<String> midPassword = getOneStep(next);
-            usedPassword[usedPointer] = next;
-            usedPointer++;
-            for (String mid : midPassword) {
-                if (!findString(deadends, mid) && !findString(usedPassword, mid)) {
-                    oneStepPassword[oneTail] = mid;
-                    oneTail++;
-                    nextTotal++;
-                }
-            }
-            if (oneHead == oneTail) {
-                return -1;
-            }
-            if (total == 0) {
-                total = nextTotal;
-                nextTotal = 0;
-                step++;
-            }
-        }
-    }
-}
-
 public class Main {
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();   //获取开始时间
         Solution s = new Solution();
         System.out.println(s.openLock(new String[]{
-                "0201", "0101", "0102", "1212", "2002"
-        }, "0202"));
+                "8887", "8889", "8878", "8898", "7888", "9888"
+        }, "8888"));
+        long endTime = System.currentTimeMillis(); //获取结束时间
+        System.out.println("程序运行时间： " + (endTime - startTime) + "ms");
     }
 }
