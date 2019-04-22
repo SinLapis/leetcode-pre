@@ -19,17 +19,13 @@ class Solution {
             int[] sorted = new int[left.length + right.length];
             int i = 0;
             while (i < left.length + right.length) {
-                if (leftIndex >= left.length) {
+                if (leftIndex >= left.length && rightIndex < right.length) {
                     sorted[i] = right[rightIndex];
                     rightIndex++;
-                    continue;
-                }
-                if (rightIndex >= right.length) {
+                } else if (rightIndex >= right.length && leftIndex < left.length) {
                     sorted[i] = left[leftIndex];
                     leftIndex++;
-                    continue;
-                }
-                if (left[leftIndex] < right[rightIndex]) {
+                } else if (left[leftIndex] < right[rightIndex]) {
                     sorted[i] = left[leftIndex];
                     leftIndex++;
                 } else {
@@ -74,6 +70,6 @@ class Solution {
 public class Main {
     public static void main(String[] args) {
         Solution s = new Solution();
-        s.arrayPairSum(new int[]{1,4,3,2});
+        s.arrayPairSum(new int[]{1,2,3,2});
     }
 }
