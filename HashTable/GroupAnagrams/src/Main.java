@@ -6,18 +6,13 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] l1 = new Integer[]{1, 2, 3};
-        Integer[] l2 = new Integer[]{1, 2, 3};
-        HashMap<Integer[], Integer> a = new HashMap<>();
-        a.put(l1, 1);
-        a.put(l2, 2);
-        System.out.println(Arrays.hashCode(l1));
-        System.out.println(Arrays.hashCode(l2));
+        String[] p = new String[]{"ate", "eat", "bbt"};
+        Solution s = new Solution();
+        List<List<String>> r = s.groupAnagrams(p);
     }
 }
 
-class Solution {
-
+class Solution1 {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String>> classification = new HashMap<>();
         List<String> keys = new ArrayList<>();
@@ -39,5 +34,25 @@ class Solution {
             results.add(newResult);
         }
         return results;
+    }
+}
+class Solution {
+    int hashArray(String s) {
+        int[] alpha = new int[26];
+        char[] cs = s.toCharArray();
+        for (char c: cs) {
+            alpha[c - 'a']++;
+        }
+        return Arrays.hashCode(alpha);
+    }
+    public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<Integer, List<String>> strCount = new HashMap<>();
+        for (String s: strs) {
+            int newKey = hashArray(s);
+            List<String> l = strCount.getOrDefault(newKey, new ArrayList<>());
+            l.add(s);
+            strCount.put(newKey, l);
+        }
+        return new ArrayList<>(strCount.values());
     }
 }
