@@ -6,9 +6,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        String[] p = new String[]{"ate", "eat", "bbt"};
-        Solution s = new Solution();
-        List<List<String>> r = s.groupAnagrams(p);
+        int[] a1 = new int[]{1, 2, 3};
+        int[] a2 = new int[]{1, 2, 3};
+        System.out.println(Arrays.hashCode(a1));
+        System.out.println(Arrays.hashCode(a2));
     }
 }
 
@@ -39,8 +40,7 @@ class Solution1 {
 class Solution {
     int hashArray(String s) {
         int[] alpha = new int[26];
-        char[] cs = s.toCharArray();
-        for (char c: cs) {
+        for (char c: s.toCharArray()) {
             alpha[c - 'a']++;
         }
         return Arrays.hashCode(alpha);
