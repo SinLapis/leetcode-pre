@@ -13,7 +13,7 @@ class Solution {
         }
         int left = 0, right = nums.length - 1, mid;
         if (nums[right] > nums[right - 1]) {
-            return right - 1;
+            return right;
         }
         while (left < right) {
             mid = left + (right - left >> 1);
