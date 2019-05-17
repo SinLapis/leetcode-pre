@@ -1,8 +1,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        int[] l1 = new int[] {1,2,2,3,4};
-        int[] l2 = new int[] {2,3,3,4,5};
+        int[] l1 = new int[] {1,2};
+        int[] l2 = new int[] {-1,3};
         Solution s = new Solution();
         System.out.println(s.findMedianSortedArrays(l1, l2));
     }
@@ -11,15 +11,6 @@ public class Main {
 class Comparation {
     int left, right, mid;
     int smaller, equal, larger;
-
-    public Comparation(int left, int right, int mid, int smaller, int equal, int larger) {
-        this.left = left;
-        this.right = right;
-        this.mid = mid;
-        this.smaller = smaller;
-        this.equal = equal;
-        this.larger = larger;
-    }
 
     public Comparation() {
         reset();
@@ -33,19 +24,18 @@ class Comparation {
 }
 
 class Solution {
-    int intMedian(int[] num) {
+    double doubleMedian(int[] num) {
         int len = num.length, half;
         if ((len & 1) == 1) {
-            return num[len >> 1];
+            return (double) num[len >> 1];
         } else {
             half = (len >> 1) - 1;
-            return (num[half] + num[half + 1]) >> 1;
+            return ((double) (num[half] + num[half + 1])) / 2.0;
         }
     }
 
     void compare(int[] num, Comparation c) {
         for (int value : num) {
-            if (value > c.right || value < c.left) continue;
             if (value > c.mid) c.larger++;
             else if (value < c.mid) c.smaller++;
             else c.equal++;
@@ -53,12 +43,11 @@ class Solution {
     }
 
     double medianInEvenLengthArray(int[] nums1, int[] nums2) {
-        int median1 = intMedian(nums1), median2 = intMedian(nums2);
-        int half = (nums1.length + nums2.length >> 1) - 1;
+        int half = (nums1.length + nums2.length >> 1);
         Comparation cr = new Comparation();
         Comparation cl = new Comparation();
-        cr.left = cl.left = Math.min(median1, median2);
-        cr.right = cl.right = Math.max(median1, median2);
+        cr.left = cl.left = Math.min(nums1[0], nums2[0]);
+        cr.right = cl.right = Math.max(nums1[nums1.length - 1], nums2[nums2.length - 1]);
         while (cr.left < cr.right) {
             cr.reset();
             cr.mid = cr.left + (cr.right - cr.left >> 1);
@@ -85,16 +74,15 @@ class Solution {
                 cl.left = cl.mid + 1;
             }
         }
-        if (cl.left == cl.right) cl.mid = cl.right;
+        if (cl.left == cl.right) cl.mid = cl.left;
         return ((double) (cl.mid + cr.mid)) / 2.0;
     }
 
     double medianInOddLengthArray(int[] nums1, int[] nums2) {
-        int median1 = intMedian(nums1), median2 = intMedian(nums2);
         int half = nums1.length + nums2.length >> 1;
         Comparation c = new Comparation();
-        c.left = Math.min(median1, median2);
-        c.right = Math.max(median1, median2);
+        c.left = Math.min(nums1[0], nums2[0]);
+        c.right = Math.max(nums1[nums1.length - 1], nums2[nums2.length - 1]);
         while (c.left < c.right) {
             c.reset();
             c.mid = c.left + (c.right - c.left >> 1);
@@ -112,8 +100,8 @@ class Solution {
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int len1 = nums1.length, len2 = nums2.length;
-        if (len1 == 0) return (double)intMedian(nums2);
-        if (len2 == 0) return (double)intMedian(nums1);
+        if (len1 == 0) return doubleMedian(nums2);
+        if (len2 == 0) return doubleMedian(nums1);
         if ((len1 + len2 & 1) == 0) {
             return medianInEvenLengthArray(nums1, nums2);
         } else {
