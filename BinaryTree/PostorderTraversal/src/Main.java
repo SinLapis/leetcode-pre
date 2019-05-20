@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Main {
 }
 
@@ -12,22 +13,22 @@ class TreeNode {
     }
 }
 
-class Solution2 {
+class Solution {
     void traverse(TreeNode node, List<Integer> l) {
-        l.add(node.val);
         if (node.left != null) traverse(node.left, l);
         if (node.right != null) traverse(node.right, l);
+        l.add(node.val);
     }
 
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> l = new ArrayList<>();
         if (root != null) traverse(root, l);
         return l;
     }
 }
 
-class Solution {
-    public List<Integer> preorderTraversal(TreeNode root) {
+class Solution2 {
+    public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) return result;
         Stack<TreeNode> stack = new Stack<>();
@@ -37,15 +38,16 @@ class Solution {
         while (!stack.isEmpty()) {
             next = stack.peek();
             if (!visited.contains(next)) {
-                result.add(next.val);
                 visited.add(next);
                 if (next.left != null) {
                     stack.push(next.left);
                 }
             } else {
-                stack.pop();
-                if (next.right != null) {
+                if (next.right != null && !visited.contains(next.right)) {
                     stack.push(next.right);
+                } else {
+                    result.add(next.val);
+                    stack.pop();
                 }
             }
         }
