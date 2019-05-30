@@ -1,12 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        TreeNode n1 = new TreeNode(2);
-        TreeNode n2 = new TreeNode(1);
-        TreeNode n3 = new TreeNode(3);
+        TreeNode n1 = new TreeNode(5);
+        TreeNode n2 = new TreeNode(3);
+        TreeNode n3 = new TreeNode(6);
+        TreeNode n4 = new TreeNode(2);
+        TreeNode n5 = new TreeNode(4);
+        TreeNode n6 = new TreeNode(7);
         n1.left = n2;
         n1.right = n3;
+        n2.left = n4;
+        n2.right = n5;
+        n3.right = n6;
         Solution s = new Solution();
-        System.out.println(s.deleteNode(n1, 2));
+        System.out.println(s.deleteNode(n1, 5));
     }
 }
 
@@ -21,58 +27,34 @@ class TreeNode {
 }
 
 class Solution {
-    TreeNode findLeftestNode(TreeNode parent) {
-        TreeNode t = parent.left;
-        if (t == null) return null;
+    void replaceWithRightestNode(TreeNode deleteNode) {
+        TreeNode alterNodeParent = deleteNode;
+        TreeNode t = deleteNode.left;
+        while (t.right != null) {
+            alterNodeParent = t;
+            t = t.right;
+        }
+        TreeNode alterNode = alterNodeParent.right;
+        deleteNode.val = alterNode.val;
+        alterNodeParent.right = alterNode.left;
+    }
+
+    void replaceWithLeftestNode(TreeNode deleteNode) {
+        TreeNode alterNodeParent = deleteNode;
+        TreeNode t = deleteNode.right;
         while (t.left != null) {
-            parent = t;
+            alterNodeParent = t;
             t = t.left;
         }
-        return parent;
-    }
-
-    void deleteNochild(TreeNode parent, boolean isLeft) {
-        if (isLeft) {
-            parent.left = null;
-        } else {
-            parent.right = null;
-        }
-    }
-
-    void deleteOneChild(TreeNode parent, boolean parentLeft, boolean childLeft) {
-        if (parentLeft) {
-            if (childLeft) parent.left = parent.left.left;
-            else parent.left = parent.left.right;
-        } else {
-            if (childLeft) parent.right = parent.right.left;
-            else parent.right = parent.right.right;
-        }
-    }
-
-    void deleteTwoChild(TreeNode parent, boolean isLeft) {
-        TreeNode current;
-        if (isLeft) current = parent.left;
-        else current = parent.right;
-        TreeNode leftestParent = findLeftestNode(current.right);
-        if (leftestParent == null) {
-            current.right.left = current.left;
-            if (isLeft) parent.left = current.right;
-            else parent.right = current.right;
-            return;
-        }
-        if (isLeft) parent.left = leftestParent.left;
-        else parent.right = leftestParent.left;
-        leftestParent.left.left = current.left;
-        leftestParent.left.right = current.right;
-        leftestParent.left = null;
+        TreeNode alterNode = alterNodeParent.left;
+        deleteNode.val = alterNode.val;
+        alterNodeParent.left = alterNode.right;
     }
 
     TreeNode find(TreeNode root, int val) {
         TreeNode next = root;
-        TreeNode parent = null;
         while (next != null) {
-            if (next.val == val) return parent;
-            parent = next;
+            if (next.val == val) return next;
             if (val < next.val) {
                 next = next.left;
             } else next = next.right;
@@ -80,53 +62,68 @@ class Solution {
         return null;
     }
 
-    public TreeNode deleteNode(TreeNode root, int key) {
-        if (root == null) return null;
-        if (root.val == key) {
-            if (root.left == null && root.right == null) return null;
-            if (root.left == null) {
-                return root.right;
+    TreeNode findParent(TreeNode root, int val) {
+        TreeNode next = root;
+        while (next != null) {
+            if (val < next.val) {
+                if (next.left != null && val == next.left.val) return next;
+                next = next.left;
+            } else {
+                if (next.right != null && val == next.right.val) return next;
+                next = next.right;
             }
-            if (root.right == null) {
-                return root.left;
-            }
-            TreeNode leftestParent = findLeftestNode(root);
-            leftestParent.left.left = root.left;
-            leftestParent.left.right = root.right;
-            TreeNode newRoot = leftestParent.left;
-            leftestParent.left = null;
-            return newRoot;
         }
-        TreeNode deleteParent = find(root, key);
-        if (deleteParent == null) return root;
-        boolean isLeft = key < deleteParent.val;
-        int childNum = 0;
-        TreeNode deleteNode;
-        if (isLeft) {
-            deleteNode = deleteParent.left;
+        return null;
+    }
+
+    TreeNode deleteRoot(TreeNode root) {
+        if (root.right == null) {
+            if (root.left == null) return null;
+            else return root.left;
+        }
+        if (root.right.left == null) {
+            root.right.left = root.left;
+            return root.right;
+        } else replaceWithLeftestNode(root);
+        return root;
+    }
+
+    TreeNode deleteChild(TreeNode root, TreeNode deleteNode) {
+        TreeNode parent = findParent(root, deleteNode.val);
+        // 没有子节点
+        if (deleteNode.left == null && deleteNode.right == null) {
+            if (parent.left == deleteNode) parent.left = null;
+            else if (parent.right == deleteNode) parent.right = null;
+        } else if (deleteNode.left == null) {
+            if (parent.left == deleteNode) {
+                parent.left = deleteNode.right;
+            } else if (parent.right == deleteNode) {
+                parent.right = deleteNode.right;
+            }
+        } else if (deleteNode.right == null) {
+            if (parent.left == deleteNode) {
+                parent.left = deleteNode.left;
+            } else if (parent.right == deleteNode) {
+                parent.right = deleteNode.left;
+            }
         } else {
-            deleteNode = deleteParent.right;
-        }
-        boolean childLeft = false;
-        if (deleteNode.left != null) {
-            childNum++;
-            childLeft = true;
-        }
-        if (deleteNode.right != null) {
-            childNum++;
-            childLeft = false;
-        }
-        switch (childNum) {
-            case 0:
-                deleteNochild(deleteParent, isLeft);
-                break;
-            case 1:
-                deleteOneChild(deleteParent, isLeft, childLeft);
-                break;
-            case 2:
-                deleteTwoChild(deleteParent, isLeft);
+            if (deleteNode.right.left == null) {
+                deleteNode.right.left = deleteNode.left;
+                if (parent.left == deleteNode) parent.left = deleteNode.right;
+                else parent.right = deleteNode.right;
+            } else {
+                if (parent.left == deleteNode) replaceWithRightestNode(deleteNode);
+                else replaceWithLeftestNode(deleteNode);
+            }
         }
         return root;
+    }
+
+    public TreeNode deleteNode(TreeNode root, int key) {
+        TreeNode deleteNode = find(root, key);
+        if (deleteNode == null) return root;
+        if (deleteNode == root) return deleteRoot(root);
+        else return deleteChild(root, deleteNode);
     }
 }
 
